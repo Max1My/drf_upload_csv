@@ -1,0 +1,12 @@
+from rest_framework import serializers
+from .models import Hospital
+
+
+class HospitalSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Hospital
+        fields = '__all__'
+
+
+class FileUploadSerializer(serializers.Serializer):
+    file = serializers.FileField()
